@@ -1,27 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Chonburi&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');*{
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
 }
 body{
     line-height: 1.5;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 :root{
     --white-color: #ffffff;
     --black-color: #000000;
     --logo-font:  'Chonburi', cursive;
-    --background-dark: #2d3548;
-  --text-light: rgba(255,255,255,0.6);
-  --text-lighter: rgba(255,255,255,0.9);
-  --spacing-s: 8px;
-  --spacing-m: 16px;
-  --spacing-l: 24px;
-  --spacing-xl: 32px;
-  --spacing-xxl: 64px;
-  --width-container: 1200px;
   } 
   a{
       text-decoration: none;
@@ -55,7 +49,6 @@ body{
       padding:0 15px;
   }
   .header .logo a{
-    font-family: var(--logo-font);
       font-size: 30px;
       color: #000000;
       text-transform: capitalize;
@@ -71,15 +64,19 @@ body{
       color: #000000;
       text-transform: capitalize;
       transition: all 0.5s ease;
+      font-family:'Space Grotesk', sans-serif;
   }
   .header .nav ul li a:hover,
   .header .nav ul li a.active{
-      color: #D0B597;
+      color:  #B4212E;
   }
   .header #nav-check{
       position: absolute;
       opacity:0;
       pointer-events: none;
+  }
+  .header-logo{
+    width: 5rem;
   }
   .nav-toggler{
       height: 34px;
@@ -116,153 +113,233 @@ body{
   }
 
   .banner{
+    display: block;
     position: relative;
+    width: 100%;
     height:100vh;
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-top: 20em;*/
+    overflow: hidden;
   }
-  .banner h1{
+    .banner-name{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content:flex-start;
-    font-size: 100px;
-    color: rgb(186, 140, 48);
+    align-items:center;
+    padding-top: 29rem;
+    font-size: 6rem;
+    color: rgb(252, 252, 252);
     font-weight: 500;
     font-family: var(--logo-font);
-    z-index: 3;
+    opacity: 0.7;
   }
 .video-banner{
     position: absolute;
     width: 100%;
     right: 0;
     left: 0;
-    z-index: -1;
+    z-index:  1;
     overflow: hidden;
 }
 .video-banner video{
     position: relative;
     top: 50%;
-    left: 50%;
+    
     object-fit: cover;
     width: 100%;
-    height: 100%;
     transform: translate(-50%, -50%);
 }
 
-section{
+.info{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1em;
     width: 100%;
-    height: 100%;
-    background: rgb(47,40,24);
-background: linear-gradient(0deg, rgba(47,40,24,1) 0%, rgba(0,0,0,1) 49%, rgba(0,0,0,0.6728624535315986) 100%);
+    height: 100vh;
     color: white;
     text-align: center;
+    overflow: hidden;
+    line-height: 2;
+    margin-top: -2rem;
     
 }
-section h2{
-    padding: 1em;
-    font-size: 3em;
+.info h2{
+    margin: 1rem;
+    margin-right: 18rem;
+    font-size: 3.5rem;
     font-family: var(--logo-font);
     color: #D0B597;
+    line-height: 1;
 }
-section p{
-    color: white;
-    font-size: 1em;
-    margin-bottom: 2em;
+.she-gif{
+  font-size: 5rem;
+  margin-left: 15rem;
+  margin-top: -2rem;
+  font-family: 'Great Vibes', cursive;
+  color: rgb(188, 27, 27);
+}
+.info p{
+  font-family:'Space Grotesk', sans-serif; 
+    color: rgb(14, 14, 14);
+    font-size: 1.5rem;
+    margin: 2rem 5rem 5rem 3rem ;
 }
 
 .discography-grid{
-  display: grid;
-  place-items: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200vh;
+  overflow: hidden;
+  border-top: 3px solid rgb(235, 235, 235);
+   background-image: linear-gradient(rgba(247, 247, 247, 0.9), rgba(0, 0, 0, 0.9)), url("/img/cerezas.png");
+  background-repeat: repeat;
+  backdrop-filter: blur(5px);
   
- 
-        /*display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 50px;
-        grid-row-gap: 50px;*/
+}
+.discography-title{
+  font-weight: 900;
+  font-size: 3rem;
+  font-family: var(--logo-font);
+  margin-top: 3rem;
 }
 .cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 50px;
-     grid-row-gap: 50px;
-    padding: 10em;
+    grid-row-gap: 50px;
     grid-gap: 40px;
-    width: 100vh;    
+    width: 100vh;
+    margin-left: -8rem;   
+    margin-top: 5rem; 
+    
 }
 
 .card{
-    background-color: rgb(228, 228, 228);
-    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 16rem;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
 }
+
 .card-image{
     position: relative;
-    
 }
+
 .card-info{
-    padding: 20px 10 px;
+   line-height: 2rem;
+    padding: 10px 10px;
 }
+
 .card-info h3{
+    text-align: center;
     color: #000000;
-    font-weight: 500;
-    font-size: 18px;
-    margin: 10px 0 15px 0;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 550;
+    font-size: 2rem;
+    margin: 1px 0 1px 0;
 }
-.card-info h4{
-    color: #060606;
+
+.card-info p{
+    color: #262626;
     line-height: 30px;
-    font-size: 14px;
-    margin: 10px 0 15px 0;
+    font-size: 0.9rem;
+    margin: 6px 0 1px 0;
+    text-align: center;
 }
+
 img{
     width: 100%;
     display: block;
-    border-radius: 20 px 20px 0 0;
+    border-radius: 20px 20px 0px 0px;
 }
+
 .grid-container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: flex-end;
-    background-image: url(img/vinilo.jpg);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("/img/vinilo.jpg");
     background-size: cover;
     width:100%;
     height:100vh;
+    opacity: rgba(0,0,0,0.6) ;
+    overflow: hidden;
 }
+
+.text{
+  color:#D0B597 ;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.3rem;
+  width: 9rem;
+  margin-left: 3rem;
+}
+
 .songs-grid{
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     gap: 25px;
-    /*background-color: aqua;*/
-    padding: 2em;
-    width: 60em;
-    height:30em
+    margin-left: 18rem;
+    width: 50rem;
+    height:20rem;
 }
 .song{
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     border-color:1px solid aqua;
-    padding: 1em;
-    height: 3em;
+    padding: 1rem;
+    height: 5rem;
+    width: 22rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.song.one:hover{
+  background-color: #4287bc;
+  color: white;
+}
+.song.two:hover{
+  background-color: #543031;
+  color: white;
+}
+.song.three:hover{
+  background-color: #572767;
+  color: white;
+}
+.song.four:hover{
+  background-color: #917f37;
+  color: white;
+}
+.song.five:hover{
+  background-color: #434343;
+  color: white;
+}
+.song.six:hover{
+  background-color: #232e6a;
+  color: white;
+}
+.song.seven:hover{
+  background-color: #e59d39;
+  color: white;
+}
+.song.eigth:hover{
+  background-color: #5d9341;
+  color: white;
 }
 .song-img{
-    width: 4em;
+    width: 3.8em;
+    margin-top: -0.4em;
 }
 .song-img img{
     border-radius: 20em;
 }
-
+.song-name{
+  margin-left: 2em;
+  font-family: var(--logo-font);
+}
 @keyframes tonext {
     75% {
       left: 0;
@@ -295,20 +372,31 @@ img{
   
   .slider-container {
     display: flex;
+    flex-direction: column ;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-image: url(/img//FONDOO.png);
   }
-  
+  .collabs-title{
+    color: #B4212E;
+    font-family: var(--logo-font);
+    font-size: 3em;
+    font-weight: 800;
+  }
   .slider {
     width: 100%;
     max-width: 600px;
     height: 400px;
-    margin: 20px;
+    margin: 4rem;
     text-align: center;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    box-shadow: 5px 5px 24px -3px rgba(0,0,0,0.55);
+    
   }
   
   .slides {
@@ -339,24 +427,45 @@ img{
   }
   
   .slide__text-one {
-    background-image: url(/img/0a8eb7db5e9767f84a6bee257dc60e41.jpg);
+    background-image: url(/img/the-weeknd.jpg);
     background-size: cover;
     width: 100%;
     height: 100%;
     font-size: 40px;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
   }
   .slide__text-two {
-    background-image: url(/img/37d0e9454c8f9ff32fb7f6597cc75546.jpg);
+    background-image: url(/img/a$ap.jpg);
     background-size: cover;
     width: 100%;
     height: 100%;
     font-size: 40px;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
   }
-  
+  .slide__text-three {
+    background-image: url(/img/angel.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+  }
+  .slide__text-four {
+    background-image: url(/img/TaylorSwift-Lana-Del-Rey-collaboration-Midnights-696x442.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+  }
   .slide a {
     background: none;
     border: none;
@@ -367,6 +476,7 @@ img{
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     left: 5%;
+    
   }
   
   a.slide__next,
@@ -384,8 +494,8 @@ img{
     top: 48%;
     width: 35px;
     height: 35px;
-    border: solid black;
-    border-width: 0 4px 4px 0;
+    border: solid  #B4212E;;
+    border-width: 0 5px 5px 0;
     padding: 3px;
     box-sizing: border-box;
   }
@@ -397,7 +507,6 @@ img{
     background: none;
     pointer-events: none;
   }
-  
   .slider__nav {
     box-sizing: border-box;
     position: absolute;
@@ -410,125 +519,101 @@ img{
   
   .slider__navlink {
     display: inline-block;
-    height: 15px;
-    width: 15px;
+    height: 11px;
+    width: 11px;
     border-radius: 50%;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     margin: 0 10px 0 10px;
   }
   
-  @media (prefers-reduced-motion: reduce) {
-    .carousel__snapper {
-      animation-name: none;
-    }
-  }
+ 
   
-  .carousel:hover .carousel__snapper,
-  .carousel:focus-within .carousel__snapper {
-    animation-name: none;
-  }
-  
-  .carousel__navigation {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-  }
-  
-  .carousel__navigation-list,
-  .carousel__navigation-item {
-    display: inline-block;
-  }
-  
-  .carousel__navigation-button {
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #333;
-    background-clip: content-box;
-    border: 0.25rem solid transparent;
-    border-radius: 50%;
-    font-size: 0;
-    transition: transform 0.1s;
-  }
-  
-  .carousel::before,
-  .carousel::after,
-  .carousel__prev,
-  .carousel__next {
-    position: absolute;
-    top: 0;
-    margin-top: 37.5%;
-    width: 4rem;
-    height: 4rem;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    font-size: 0;
-    outline: 0;
-  }
-  
-  .carousel::before,
-  .carousel__prev {
-    left: -1rem;
-  }
-  
-  .carousel::after,
-  .carousel__next {
-    right: -1rem;
-  }
-  
-  .carousel::before,
-  .carousel::after {
-    content: '';
-    z-index: 1;
-    background-color: #333;
-    background-size: 1.5rem 1.5rem;
-    background-repeat: no-repeat;
-    background-position: center center;
-    color: #fff;
-    font-size: 2.5rem;
-    line-height: 4rem;
-    text-align: center;
-    pointer-events: none;
-  }
-  
-  .carousel::before {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
-  }
-  
-  .carousel::after {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-  }
-
+ 
 .book{
-    background-image: url(/img/735097d863cc0dceb3885dfc45c55e60.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-    width: 100%;
-    height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/img/recortada.jpg") ;
+  background-size:cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+.book h1{
+  font-size: 3em;
+  font-weight: 500;
+  color: rgb(234, 211, 211);
+  font-family:  var(--logo-font);
+}
+.book h4{
+  color: #4c5e2e;
+  font-size: 2em;
+  font-weight: 500;
+  font-family:  var(--logo-font);
 }
 
  .book-explication{
     display: flex;
     flex-direction: row;
-    background-color: white;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem;
+    margin: 2rem;
+    
 }
 .book-img{
-    width: 50%;
-    height: 50%;
+    width: 45%;
+    height: 100%;
+    
 }
-.book-img img{
-    width: 30em;
+.image-book{
+    width: 30rem;
+    border-radius: 2em;
+    box-shadow: 5px 5px 28px -2px rgba(255, 140, 73, 0.891);
 }
 .book-text{
-    width: 40%;
+  background-color: white;
+    width: 45%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5em;
 }
 footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/img/kiss.jpg") ;
+    overflow: hidden;
+    width: 100%;
+    height: 40vh;
+  }
+footer h2{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2REM;
 }
+.music-stream{
+  display: flex;
+  flex-direction: row;
+  width: 13em;
+  
+  justify-content: center;
+  align-content:space-between;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  
+}
+footer p{
+  color: rgba(255, 255, 255, 0.591);
+  font-size: 12px;
+}
+
   @media(max-width: 991px){
       .nav-toggler{
           display: flex;
@@ -569,8 +654,111 @@ footer{
        h1{
         font-size:12px ;
       }
+      .banner{
+        width: 100%;
+        height: 50vh;
+      }
+      video{
+        z-index: -2;
+      }
+      .info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        
+        
+      }
+      .info h2{
+        margin-left: 9rem;
+        font-size: 2.5rem;
+      }
+      .she-gif{
+        margin-left: -5rem;
+        font-size: 3rem;
+      }
+      .info p{
+        text-align: left;
+        font-size: 1.2rem;
+      }
+      .discography-grid{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        
+        width: 100%;
+        height: 420vh;
+      }
       .cards{
         grid-template-columns: repeat(1, 1fr); 
+        margin-left: 30rem;
       
   }
-  
+  .grid-container{
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .text{
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: -25rem;
+  }
+  .songs-grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-left: 29rem;
+  }
+  .slider-container{
+    height: 90vh;
+    padding: 1rem;
+  }
+  .slider::before,
+  .slider::after,
+  .slide__prev,
+  .slide__next {
+    position: absolute;
+    top: 48%;
+    width: 30px;
+    height: 30px;
+    border: solid  #B4212E;;
+    border-width: 0 5px 5px 0;
+    padding: 3px;
+    box-sizing: border-box;
+  }
+  .book h4{
+    font-size: 1rem;
+  }
+  .book h1{
+    font-size: 2rem;
+  }
+  .book-explication{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .book-img{
+    width: 100%;
+    height: 100%;   
+    
+    border-radius: 25px;
+  }
+.image-book{
+  width: 25rem;
+  box-shadow: 5px 5px 28px -2px rgba(255, 140, 73, 0.891);
+}
+  .book-text{
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1rem;
+    text-align: left;
+  }
+}
